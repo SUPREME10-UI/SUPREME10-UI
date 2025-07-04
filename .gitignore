@@ -1,0 +1,15 @@
+# Python envs
+.venv/
+env/
+__pycache__/
+
+# Big binaries & models
+*.bin
+*.dll
+*.lib
+*.pyd
+
+# IDE & logs
+.idea/
+*.iml
+*.log

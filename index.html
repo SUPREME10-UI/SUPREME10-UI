@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en" xml:lang="en">
+
+<head>
+<title>Home | UPSA VIRTUAL ASSITANCE</title>
+  <link rel="shortcut icon"
+    href="https://join.upsavirtual.site/pluginfile.php/1/core_admin/favicon/64x64/1745747491/uspavirtual-favicon_2.png" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="moodle, Home | UPSA VIRTUAL" />
+  <link rel="stylesheet" type="text/css">
+  <style>
+        /* Chatbot Button with Bipping Effect */
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            animation: bipping 2s infinite;
+        }
+
+        /* Bipping Animation (Pulse + Beep) */
+        @keyframes bipping {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+            }
+
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 15px rgba(0, 123, 255, 0.4);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+            }
+        }
+
+        /* Notification Badge */
+        .chatbot-notification {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #ff4757;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        /* Chatbot Container */
+        .chatbot-container {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .chatbot-button:active {
+            cursor: grabbing;
+        }
+
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+            }
+
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+            }
+        }
+
+        @keyframes activeBipping {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+            }
+
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.2);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+            }
+        }
+
+        .chatbot-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Popup container */
+        .chatbot-popup {
+            position: fixed;
+            bottom: 90px;
+            /* Higher than chatbot button */
+            right: 20px;
+            background: linear-gradient(135deg, #ffffff, #f1f1f1);
+            color: #333;
+            padding: 12px 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            font-weight: bold;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            z-index: 2000;
+            /* Higher than chatbot button */
+            max-width: 250px;
+            text-align: center;
+        }
+
+        /* Arrow pointing to chatbot button */
+        .chatbot-popup::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: #f1f1f1 transparent transparent transparent;
+        }
+
+        /* Show the popup */
+        .chatbot-popup.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chat-header {
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .chat-messages {
+            height: 350px;
+            overflow-y: auto;
+            padding: 10px;
+            background: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-input {
+            display: flex;
+            border-top: 1px solid #ccc;
+            padding: 5px;
+            background: #fff;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .chat-input button {
+            padding: 10px;
+            margin-left: 5px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .chat-message {
+            padding: 8px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .user-message {
+            background: #007bff;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .bot-message {
+            background: #e5e5e5;
+            color: black;
+            align-self: flex-start;
+        }
+
+        .chatbot-icon {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            display: block;
+            /* Ensures visibility */
+            border-radius: 50%;
+            /* Optional: makes it round */
+        }
+
+        .typing-indicator {
+    display: inline-flex;
+    gap: 4px;
+    background: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin: 5px 0;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background: #666;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: typing-pulse 1.2s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing-pulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.chat-message {
+    white-space: pre-line; /* This preserves newlines and spaces */
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.bot-message {
+    background: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 18px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+/* Style numbered lists in messages */
+.bot-message ol {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.bot-message li {
+    margin-bottom: 5px;
+}
+
+
+    </style>
+
+<body>
+   <!-- Chatbot Button -->
+    <div id="chatbot-button" class="chatbot-button">
+        <img src="/static/chat-bot.png" alt="Chatbot Icon" class="chatbot-icon"
+            style="width: 50px; height: 50px; border-radius: 50%;">
+        <div class="chatbot-notification">!</div>
+    </div>
+
+    <!-- Chatbot Interface -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chat-header">
+            <span>Campus Guide</span>
+            <button id="close-chat">&times;</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-message">Send</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const chatbotButton = document.getElementById("chatbot-button");
+            const chatbotContainer = document.getElementById("chatbot-container");
+            const chatMessages = document.getElementById("chat-messages");
+            const closeChatButton = document.getElementById("close-chat");
+            const sendMessageButton = document.getElementById("send-message");
+            const userInput = document.getElementById("user-input");
+            const notificationBadge = document.querySelector(".chatbot-notification");
+            let isEngaged = false;
+
+            function displayMessage(sender, text) {
+                const messageElement = document.createElement("div");
+                messageElement.classList.add("chat-message", sender === "user" ? "user-message" : "bot-message");
+
+                // Capitalize first letter and preserve the rest
+                const capitalizedText = text.charAt(0).toUpperCase() + text.slice(1);
+
+                // Replace newlines with <br> tags and preserve numbered lists
+                const formattedText = text.replace(/\n/g, '<br>');
+
+                
+                messageElement.innerHTML = formattedText;
+                messageElement.textContent = text;
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function showTypingIndicator() {
+                const typingIndicator = document.createElement("div");
+                typingIndicator.classList.add("typing-indicator");
+                typingIndicator.innerHTML = `<span></span><span></span><span></span>`;
+                typingIndicator.id = "typing-indicator";
+                chatMessages.appendChild(typingIndicator);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function hideTypingIndicator() {
+                const typingIndicator = document.getElementById("typing-indicator");
+                if (typingIndicator) {
+                    typingIndicator.remove();
+                }
+            }
+
+
+
+            async function sendMessage() {
+                const message = userInput.value.trim();
+                if (!message) return;
+
+                displayMessage("user", message);
+                userInput.value = "";
+
+                // Show typing indicator immediately
+                showTypingIndicator();
+
+                try {
+                    const response = await fetch("http://localhost:5001/get-response", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ message })
+                    });
+                    const data = await response.json();
+
+                    // Remove typing indicator and show bot's response
+                    hideTypingIndicator();
+                    displayMessage("bot", data.response);
+                } catch (error) {
+                    console.error("Error:", error);
+                    hideTypingIndicator();
+                    displayMessage("bot", "Sorry, there was an error connecting to the server.");
+                }
+            }
+
+            sendMessageButton.addEventListener("click", sendMessage);
+            userInput.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    sendMessage();
+                }
+            });
+
+            chatbotButton.addEventListener("click", function () {
+                chatbotContainer.style.display = "block";
+                if (!isEngaged) {
+                    isEngaged = true;
+                    chatbotButton.style.animation = "activeBipping 3s infinite";
+                    notificationBadge.style.display = "none";
+                }
+                if (chatMessages.children.length === 0) {
+                    displayMessage("bot", "Hello! How can I assist you with UPSA LMS?");
+                }
+            });
+
+            closeChatButton.addEventListener("click", function () {
+                chatbotContainer.style.display = "none";
+            });
+
+            setTimeout(() => {
+                chatbotButton.style.animation = "none";
+            }, 1800000);
+
+            const popupMessage = document.createElement("div");
+            popupMessage.classList.add("chatbot-popup");
+            popupMessage.textContent = "👋 Hello! I am Campus Guide, your personal assistant.";
+            document.body.appendChild(popupMessage);
+
+            setTimeout(() => popupMessage.classList.add("show"), 500);
+            setTimeout(() => popupMessage.classList.remove("show"), 5000);
+
+            let isDragging = false, offsetX, offsetY;
+
+            chatbotButton.addEventListener("mousedown", (e) => {
+                isDragging = true;
+                offsetX = e.clientX - chatbotButton.getBoundingClientRect().left;
+                offsetY = e.clientY - chatbotButton.getBoundingClientRect().top;
+                chatbotButton.style.position = "fixed";
+                chatbotButton.style.transition = "none";
+            });
+
+            document.addEventListener("mousemove", (e) => {
+                if (isDragging) {
+                    let newX = e.clientX - offsetX;
+                    let newY = e.clientY - offsetY;
+                    chatbotButton.style.left = Math.max(0, Math.min(newX, window.innerWidth - chatbotButton.offsetWidth)) + "px";
+                    chatbotButton.style.top = Math.max(0, Math.min(newY, window.innerHeight - chatbotButton.offsetHeight)) + "px";
+                }
+            });
+
+            document.addEventListener("mouseup", () => {
+                isDragging = false;
+                chatbotButton.style.transition = "all 0.2s ease-out";
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

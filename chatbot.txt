@@ -1,0 +1,161 @@
+q: how do I access my courses on LMS?  
+a: Log into the LMS, navigate to the dashboard, and you will see a list of your enrolled courses. Click on a course to access its materials.  
+
+q: where can I find course materials on LMS?  
+a: 1. Navigate to the dashboard 
+   2. The courses you have enrolled in will appear on the interface 
+   3. Click on the course you want and access it materials 
+ 
+
+q: how do I submit an assignment on LMS?  
+a: 1. Navigate to the dashboard 
+   2. The courses you have enrolled in will appear on the interface 
+   3. Click on the course you want
+   4. Scroll  through the page to find assignment 
+   5. Click submit assignment 
+   6. Upload the file appropriate file for the given assignment.  
+
+q: what file formats are accepted for assignment submissions?  
+a: Most LMS platforms accept PDF, DOCX, and PPTX files, but it's best to check your instructor's requirements before submitting.  
+
+q: how do I check my grades on LMS?  
+a: Tap on the arrow looking feature on the left mid section of your page, Click on “my courses” and click on grades. 
+ 
+q: I can’t see my grades. What should I do?  
+a: If your grades are not visible, try refreshing the page or checking back later. If the issue persists, contact your instructor or the LMS support team.
+
+q: what are you?
+a: I am the virtual assistant for UPSA Learning management system
+
+q: what is a discussion forum on LMS?  
+a: A discussion forum is an online space where students and instructors can engage in academic discussions, ask questions, and share resources.  
+
+q: how do I participate in a discussion forum?  
+a: Click on the forum topic in your course page, read existing posts, and use the "Reply" button to share your thoughts or ask questions.  
+
+q: what should I do if I forget my LMS password?  
+a: Click on "Forgot Password" on the login page and follow the instructions sent to your registered email to reset your password.  
+
+q: how do I contact my instructor through LMS?  
+a: You can use the LMS messaging system or check the course page for the instructor’s contact information. Some instructors also use discussion forums for communication.  
+
+q: I’m having technical issues with LMS. Who do I contact?  
+a: Contact the university’s IT support team via the "Help" or "Support" section on the LMS homepage.  
+
+q: why can’t I access my course?  
+a: If you can't access a course, check if you're properly enrolled. If the issue persists, contact your instructor or the LMS support team.  
+
+q: how do I join a live lecture on LMS?  
+a: Look for the "Live Sessions" or "Virtual Classroom" link in your course. Ensure your internet connection is stable before joining.    
+
+q: What are some study tips?  
+a: Here are a few study tips:  
+   1. Set specific goals for each study session.  
+   2. Take regular breaks.  
+   3. Use flashcards for memorization.  
+   4. Teach the material to someone else. 
+
+q: What do you do?
+a: I help students in UPSA LMS navigation 
+
+q: Can you help me with programming languages?  
+a: Absolutely! I can provide resources on popular programming languages like Python, Java, and JavaScript. What do you want to know specifically?  
+
+q: How can I improve my time management?  
+a: Consider using a planner or digital calendar to track your tasks. Prioritize your assignments and break larger projects into smaller tasks to manage your time better.  
+
+q: Tell me a joke.  
+a: Why did the scarecrow win an award? Because he was outstanding in his field!  
+
+q: What's the best way to prepare for exams?  
+a: Start early, create a study schedule, practice past papers, and ensure you get enough rest before the exam day.  
+
+q: How do I reset my password?  
+a: To reset your password:  
+   1. Go to the LMS login page.  
+   2. Click on "Forgot Password."  
+   3. Enter your student email and follow the instructions.  
+   4. Check your email for a reset link.  
+   If you don’t receive the email, contact IT Support.
+
+q: How do I update my profile on LMS?  
+a: Go to "Settings" or "Profile" in the LMS and click "Edit" to update your details.
+
+q: Why is my course not showing in LMS?  
+a: Ensure you're enrolled, you have paid your mandatory fees and you have registered your courses. If the course is still missing, contact your instructor or IT support.
+
+q: How do I download lecture notes from LMS?  
+a: Open the course, go to "Resources" or "Course Materials," and click on the file to download.
+
+q: Can I access LMS on my phone?  
+a: Yes! You can access LMS through a web browser or by downloading the university's LMS mobile app (if available).
+
+q: can you help me register my courses?  
+a: Yes! You can register your courses by logging into the student portal and following the course registration guide. Need a direct link? [Click here](https://portal.upsa.edu/register).
+
+q: How do i solve login problem?
+a: How to solve login problems
+   (A) Activate your student mail (upsamail)
+   Open the Gmail app on your phone or login onto www.gmail.com
+   Add another account to your personal gmail account
+   Use your IDnumber@upsamail.edu.gh as your username (example: 1012325@upsamail.edu.gh)
+   Enter the default password (ask your lecturer, a classmate who has login already or check in the class WhatsApp Group for information on default or first-time password)
+   You are required to change the password to your preferable password
+   (B) First-Time Login
+   Open your student gmail (upsamail)
+   You will find a link to UPSA-Virtual in your mail
+   Click on the link. Your browser will directly open UPSA-Virtual
+   Follow the instructions to change your password. (It will be your new password for subsequent logins)
+   (C) Subsequent Login (If you have done you first time login already):
+   At the homepage of UPSA-Virtual (join.upsavirtual.site):
+   Enter your Student Number (index number as username)
+   Enter the your password
+   (D) "Invaid Login" Error Message:
+   If you see the error message "invalid login" when you attempt to login, it means the username (student ID) or the password you have provided is wrong.
+   You can retry by entering the correct username (student ID) and password.
+   If it appears you have forgotten your password follow the steps below to create a new password: 
+   If you have logged in before and have forgotten your password:
+   At the homepage of UPSA-Virtual (join.upsavirtual.site):
+   Click on the "Lost password" or  "Forgotten your username or password?" Link
+   Enter your student number at the username textbox (the reset password information will only be sent to your UPSA student email address.
+   Contact your Class Rep, Class Whatsapp Group, a classmate who has successfully activated the upsamail, or your Lecturer on how to activate upsamail. You may also send email to ISTD Support on IThelpdesk@upsamail.edu.gh). 
+
+q: how do I register my courses?  
+a: You can register your courses by logging into the student portal and following these steps:  
+   1. Log in to the student portal.  
+   2. Navigate to the "Course Registration" section.  
+   3. Select your courses and confirm registration.  
+   4. Check for any prerequisites before finalizing.  
+   Need help? Contact the academic office.
+
+q: how do i download my slides?
+a: To download your slides, go to the 'The enrolled Course' section of your course page and click on the 'Download Slides' button.
+
+q: where can I find my assignments?  
+a: You can access your assignments in the LMS under "Course Materials" or "Assignments" tab. [Click here](https://lms.upsa.edu/        assignments) to go directly to the page.
+
+q: when is my next assignment due?  
+a: Let me check...  
+   Searching LMS for deadlines...  
+   Your next assignment for [Course Name] is due on [Date]. Submit before the deadline to avoid penalties.  
+
+q: i can't access my course materials.  
+a: Try these steps:  
+   1. Refresh the LMS page.  
+   2. Clear your browser cache and cookies.  
+   3. Ensure you’re enrolled in the course.  
+   4. If the issue persists, contact IT Support.
+
+q: can you remind me of my upcoming deadlines?  
+a: Sure! I can set reminders for you.  
+   - Your next deadline for [Course Name] is [Date].  
+   - Do you want me to send you a reminder? (Yes/No)
+
+q: how can I contact a lecturer?  
+a: You can contact your lecturer via:  
+   - LMS messaging system (Go to "Messages" section).  
+   - University email ([Lecturer's Email]).  
+   - Office hours (Check faculty schedule).
+
+q: I can’t see my grades what I do ?
+a; If your grades aren’t visible try refreshing the page. If the issue persists contact your lecturer about the course or visit the       Virtual Assistance office located on the last floor of the Seidu Mustapha wing.
